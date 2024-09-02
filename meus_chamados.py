@@ -3,6 +3,16 @@ from time import sleep
 
 pa.PAUSE = 1
 
+print("Qual analista? ")
+print("1 - Todos")
+print("2- Cobrança")
+print("3 - Daniel Bonatti")
+print("4 - Dayvid Oliveira")
+print("5 - José Roberto")
+print("6 - Luna")
+print("7 - Rodrigo Bonatti")
+print("8 - Victor Homem")
+analista = int(input("Digite o número: "))
 n = int(input("Quantos chamados fechar? "))
 
 pa.click(x=124, y=880) # ABRE O GOOGLE
@@ -19,8 +29,26 @@ pa.press('down', presses=3) # VAI ATÉ "DUVIDAS E FUNCIONALIDADE"
 pa.press('enter') # "SELECIONA DUVIDAS E FUNCIONALIDADES"
 pa.press('tab', presses=2) # VAI ATÉ O ANALISTA
 pa.press('enter') # SELECIONA O CAMPO DE ANALISTA
-pa.press('down', presses=7) # VAI ATÉ VICTOR HOMEM          
-pa.press('enter') # SELECIONA VICTOR HOMEM
+
+if analista == 1:
+    pa.press('enter')
+if analista == 2:
+    pa.press('down')
+    pa.press('enter')
+if analista == 3:
+    pa.press('down', presses=2)
+    pa.press('enter')
+if analista == 4:
+    pa.press('down', presses=3)
+    pa.press('enter')
+if analista == 5:
+    pa.press('down', presses=4)
+    pa.press('enter')
+if analista == 6:
+    pa.press('down', presses=5)
+    pa.press('enter')
+
+
 pa.scroll(-200) # ROLA A TELA
 pa.click(x=218, y=818) # CLICA EM PESQUISAR
 sleep(3)
