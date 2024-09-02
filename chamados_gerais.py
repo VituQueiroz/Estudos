@@ -23,7 +23,7 @@ sleep(3)
 
 for i in range(n):
     pa.click(x=619, y=279) # CLICA NO CHAMADO 
-    sleep(1.5)
+    sleep(2.2)
     pa.click(x=735, y=162) # CLICA NA TELA SUPERIOR
     pa.press('tab', presses=3) # VAI ATÉ O BOTÃO DE OPÇÃO
     pa.press('enter') # ABRE O BOTÃO DE OPÇÃO
