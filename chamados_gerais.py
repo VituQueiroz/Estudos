@@ -53,5 +53,5 @@ for i in range():
     sleep(2)
     pa.click(x=21, y=62) # SETA DE VOLTAR PÁGINA
     sleep(2.5)
-    pa.click(x=93, y=63) # RECARREGA PÁGINA
+    pa.click(x=93, y=63) # RECARREGA A PÁGINA
     sleep(2.5)
