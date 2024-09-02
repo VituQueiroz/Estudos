@@ -3,6 +3,8 @@ from time import sleep
 
 pa.PAUSE = 1
 
+n = int(input("Quantos chamados fechar? "))
+
 pa.click(x=124, y=880) # ABRE O GOOGLE
 pa.hotkey('ctrl', 't') # ABRE A JANELA DE CHAMADO
 pa.write('https://painel.f5sg.com.br/support/dashboard') # ABRE O LINK DO PAINEL
@@ -19,7 +21,7 @@ pa.scroll(-200) # ROLA A TELA
 pa.click(x=218, y=818) # CLICA EM PESQUISAR
 sleep(3)
 
-for i in range():
+for i in range(n):
     pa.click(x=619, y=279) # CLICA NO CHAMADO 
     sleep(1.5)
     pa.click(x=735, y=162) # CLICA NA TELA SUPERIOR
