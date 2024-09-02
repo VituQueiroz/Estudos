@@ -9,7 +9,7 @@ pa.click(x=124, y=880) # ABRE O GOOGLE
 pa.hotkey('ctrl', 't') # ABRE A JANELA DE CHAMADO
 pa.write('https://painel.f5sg.com.br/support/dashboard') # ABRE O LINK DO PAINEL
 pa.press('enter')
-sleep(7.5)
+sleep(10)
 pa.moveTo(x=21, y=305) # VAI ATÉ A PARTE DE CHAMADO NA LISTA
 pa.click(x=94, y=370) # CLICA NA LISTA DE CHAMADOS
 sleep(3)
@@ -19,7 +19,7 @@ pa.press('down', presses=3) # VAI ATÉ "DUVIDAS E FUNCIONALIDADE"
 pa.press('enter') # "SELECIONA DUVIDAS E FUNCIONALIDADES"
 pa.press('tab', presses=2) # VAI ATÉ O ANALISTA
 pa.press('enter') # SELECIONA O CAMPO DE ANALISTA
-pa.press('down', presses=7) # VAI ATÉ VICTOR HOMEM
+pa.press('down', presses=7) # VAI ATÉ VICTOR HOMEM          
 pa.press('enter') # SELECIONA VICTOR HOMEM
 pa.scroll(-200) # ROLA A TELA
 pa.click(x=218, y=818) # CLICA EM PESQUISAR
