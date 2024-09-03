@@ -5,7 +5,7 @@ pa.PAUSE = 1
 
 print("Qual analista? ")
 print("1 - Todos")
-print("2- Cobrança")
+print("2 - Cobrança")
 print("3 - Daniel Bonatti")
 print("4 - Dayvid Oliveira")
 print("5 - José Roberto")
@@ -53,7 +53,7 @@ elif analista == 7:
 elif analista == 8:
     pa.press('down', presses=7)
     pa.press('enter')
-    
+
 pa.scroll(-200) # ROLA A TELA
 pa.click(x=218, y=818) # CLICA EM PESQUISAR
 sleep(3)
