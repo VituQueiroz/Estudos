@@ -5,17 +5,8 @@ from time import sleep
 def fecha_chamado():
     pa.PAUSE = 1
 
-    print("Qual analista? ")
-    print("1 - Todos")
-    print("2 - Cobrança")
-    print("3 - Daniel Bonatti")
-    print("4 - Dayvid Oliveira")
-    print("5 - José Roberto")
-    print("6 - Luna")
-    print("7 - Rodrigo Bonatti")
-    print("8 - Victor Homem")
     analista = int(input("Digite o número: "))
-    n = int(input("Quantos chamados fechar? "))
+    n = Entry.get()
 
     pa.click(x=124, y=880) # ABRE O GOOGLE
     pa.hotkey('ctrl', 't') # ABRE A JANELA DE CHAMADO
@@ -99,11 +90,17 @@ def fecha_chamado():
 
 janela = Tk()
 janela.title("Fechamento de Chamado")
+janela.geometry("400x400")
 
-texto = Label(janela, text="Teste")
-texto.grid(column=0, row=0)
+user = Label(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n 8 - Victor Homem")
+texto = Label(janela, text="Digite o número do usuário:")
+entrada = Tk.entry()
+entrada.pack(pady=10)
+user.pack(pady=10)
+texto.pack(pady=10)
 
 fechar = Button(janela, text="Fechar Chamados", command=fecha_chamado)
-fechar.grid(column=0, row=1)
+fechar.pack(pady=10)
+
 
 janela.mainloop()
