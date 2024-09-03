@@ -32,23 +32,28 @@ pa.press('enter') # SELECIONA O CAMPO DE ANALISTA
 
 if analista == 1:
     pa.press('enter')
-if analista == 2:
+elif analista == 2:
     pa.press('down')
     pa.press('enter')
-if analista == 3:
+elif analista == 3:
     pa.press('down', presses=2)
     pa.press('enter')
-if analista == 4:
+elif analista == 4:
     pa.press('down', presses=3)
     pa.press('enter')
-if analista == 5:
+elif analista == 5:
     pa.press('down', presses=4)
     pa.press('enter')
-if analista == 6:
+elif analista == 6:
     pa.press('down', presses=5)
     pa.press('enter')
-
-
+elif analista == 7:
+    pa.press('down', presses=6)
+    pa.press('enter')
+elif analista == 8:
+    pa.press('down', presses=7)
+    pa.press('enter')
+    
 pa.scroll(-200) # ROLA A TELA
 pa.click(x=218, y=818) # CLICA EM PESQUISAR
 sleep(3)
