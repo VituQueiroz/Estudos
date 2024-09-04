@@ -86,7 +86,7 @@ def fecha_chamado():
         pa.click(x=21, y=62) # SETA PARA VOLTAR PÁGINA
         sleep(2.5)
         pa.click(x=93, y=63) # RECARREGA AS PÁGINAS
-        sleep(2.5)
+        sleep(3.5)
 
 janela = Tk()
 janela.title("Fechamento de Chamado")
