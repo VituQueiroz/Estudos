@@ -8,8 +8,13 @@ def fecha_chamado():
     analista = int(analista_entry.get())
     n = int(n_entry.get())
 
-    pa.click(x=124, y=880) # ABRE O GOOGLE
-    pa.hotkey('ctrl', 't') # ABRE A JANELA DE CHAMADO
+    pa.press('win')
+    sleep(0.5)
+    pa.write('chrome')
+    sleep(0.5)
+    pa.press('enter')
+    sleep(3)
+    pa.hotkey('win','up')
     pa.write('https://painel.f5sg.com.br/support/dashboard') # ABRE O LINK DO PAINEL
     pa.press('enter')
     sleep(10)
