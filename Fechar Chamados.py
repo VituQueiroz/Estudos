@@ -2,6 +2,29 @@ from tkinter import *
 import pyautogui as pa
 from time import sleep
 
+janela = Tk()
+janela.title("Fechamento de Chamado")
+janela.geometry("400x400")
+
+user = Label(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n 8 - Victor Homem")
+texto = Label(janela, text="Digite o número do usuário:")
+user.pack(pady=10)
+texto.pack(pady=10)
+
+analista_entry = Entry(janela)
+analista_entry.pack(pady=10)
+
+texto2 = Label(janela, text="Quantos chamados fechar?")
+texto2.pack(pady=10)
+
+n_entry = Entry(janela)
+n_entry.pack(pady=10)
+
+fechar = Button(janela, text="Fechar Chamados", command=fecha_chamado)
+fechar.pack(pady=10)
+
+janela.mainloop()
+
 def fecha_chamado():
     pa.PAUSE = 1
 
@@ -92,26 +115,3 @@ def fecha_chamado():
         sleep(2.5)
         pa.click(x=93, y=63)
         sleep(3.5)
-
-janela = Tk()
-janela.title("Fechamento de Chamado")
-janela.geometry("400x400")
-
-user = Label(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n 8 - Victor Homem")
-texto = Label(janela, text="Digite o número do usuário:")
-user.pack(pady=10)
-texto.pack(pady=10)
-
-analista_entry = Entry(janela)
-analista_entry.pack(pady=10)
-
-texto2 = Label(janela, text="Quantos chamados fechar?")
-texto2.pack(pady=10)
-
-n_entry = Entry(janela)
-n_entry.pack(pady=10)
-
-fechar = Button(janela, text="Fechar Chamados", command=fecha_chamado)
-fechar.pack(pady=10)
-
-janela.mainloop()
