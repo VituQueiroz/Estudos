@@ -71,7 +71,7 @@ def fecha_chamado():
         pa.click(x=21, y=62) # CLICA NA SETA DE VOLTAR PÁGINA
         sleep(1)
         pa.click(x=735, y=162) # CLICA NA TELA SUPERIOR
-        sleep(3)
+        sleep(2)
         pa.press('tab', presses=7) # VAI ATÉ O CONTATO
         sleep(1)
         pa.hotkey('ctrl','v') # COLA O NOME
