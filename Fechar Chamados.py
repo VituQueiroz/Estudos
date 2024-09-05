@@ -96,22 +96,23 @@ def fecha_chamado():
 janela = Tk()
 janela.title("Fechamento de Chamado")
 janela.geometry("400x400")
+janela.configure(bg='antiquewhite')
 
-user = Label(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n 8 - Victor Homem")
-texto = Label(janela, text="Digite o número do usuário:")
+user = Label(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n 8 - Victor Homem",fg='#333333', bg='antiquewhite')
+texto = Label(janela, text="Digite o número do usuário:", bg='antiquewhite', fg='#333333')
 user.pack(pady=10)
 texto.pack(pady=10)
 
-analista_entry = Entry(janela)
+analista_entry = Entry(janela, bg='white', fg='#333333', font='arial')
 analista_entry.pack(pady=10)
 
-texto2 = Label(janela, text="Quantos chamados fechar?")
+texto2 = Label(janela, text="Quantos chamados fechar?", bg='antiquewhite', fg='#333333')
 texto2.pack(pady=10)
 
-n_entry = Entry(janela)
+n_entry = Entry(janela, bg='white', fg='#333333', font='arial')
 n_entry.pack(pady=10)
 
-fechar = Button(janela, text="Fechar Chamados", command=fecha_chamado)
+fechar = Button(janela, text="Fechar Chamados", command=fecha_chamado, bg='#3C8DBC', fg='#fff', font='arial')
 fechar.pack(pady=10)
 
 janela.mainloop()
