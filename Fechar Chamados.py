@@ -15,18 +15,18 @@ def fecha_chamado():
     pa.press('enter')
     sleep(3)
     pa.hotkey('win','up')
-    pa.write('https://painel.f5sg.com.br/support/dashboard') # ABRE O LINK DO PAINEL
+    pa.write('https://painel.f5sg.com.br/support/dashboard')
     pa.press('enter')
     sleep(10)
-    pa.moveTo(x=21, y=305) # VAI ATÉ A PARTE DE CHAMADO NA LISTA
-    pa.click(x=94, y=370) # CLICA NA LISTA DE CHAMADOS
+    pa.moveTo(x=21, y=305)
+    pa.click(x=94, y=370)
     sleep(3)
-    pa.press('tab', presses=2) # TAB 2 VEZES PARA IR ATÉ O TIPO DE CHAMADO
-    pa.press('enter') # ABRE O TIPO DE CHAMADO
-    pa.press('down', presses=3) # VAI ATÉ "DUVIDAS E FUNCIONALIDADE"
-    pa.press('enter') # "SELECIONA DUVIDAS E FUNCIONALIDADES"
-    pa.press('tab', presses=2) # VAI ATÉ O ANALISTA
-    pa.press('enter') # SELECIONA O CAMPO DE ANALISTA
+    pa.press('tab', presses=2)
+    pa.press('enter')
+    pa.press('down', presses=3)
+    pa.press('enter')
+    pa.press('tab', presses=2)
+    pa.press('enter')
 
     if analista == 1:
         pa.press('enter')
@@ -52,45 +52,45 @@ def fecha_chamado():
         pa.press('down', presses=7)
         pa.press('enter')
 
-    pa.scroll(-200) # ROLA A TELA
-    pa.click(x=218, y=818) # CLICA EM PESQUISAR
+    pa.scroll(-200)
+    pa.click(x=218, y=818)
     sleep(3)
 
     for _ in range(n):
-        pa.click(x=619, y=279) # CLICA NO CHAMADO 
+        pa.click(x=619, y=279)
         sleep(1.5)
-        pa.click(x=735, y=162) # CLICA NA TELA SUPERIOR
-        pa.press('tab', presses=3) # VAI ATÉ O BOTÃO DE OPÇÃO
-        pa.press('enter') # ABRE O BOTÃO DE OPÇÃO
-        pa.press('tab', presses=3) # VAI ATE VER LICENÇA
-        pa.press('enter') # ABRE A LICENÇA
+        pa.click(x=735, y=162)
+        pa.press('tab', presses=3)
+        pa.press('enter')
+        pa.press('tab', presses=3)
+        pa.press('enter')
         sleep(2)
-        pa.click(x=735, y=162) # CLICA NA TELA SUPERIOR
-        pa.press('tab', presses=9) # VAI ATÉ O NOME DA LICENÇA
-        pa.hotkey('ctrl','c') # COPIA A LICENÇA
-        pa.click(x=21, y=62) # CLICA NA SETA DE VOLTAR PÁGINA
+        pa.click(x=735, y=162)
+        pa.press('tab', presses=9)
+        pa.hotkey('ctrl','c')
+        pa.click(x=21, y=62)
         sleep(1)
-        pa.click(x=735, y=162) # CLICA NA TELA SUPERIOR
+        pa.click(x=735, y=162)
         sleep(2)
-        pa.press('tab', presses=7) # VAI ATÉ O CONTATO
+        pa.press('tab', presses=7)
         sleep(1)
-        pa.hotkey('ctrl','v') # COLA O NOME
+        pa.hotkey('ctrl','v')
         sleep(1)
-        pa.press('tab', presses=20) # VAI ATE O FECHAMENTO
+        pa.press('tab', presses=20)
         sleep(1)
-        pa.press('enter') # ABRE O FECHAMENTO
+        pa.press('enter')
         sleep(1)
-        pa.press('tab', presses=3) # BOX1
-        pa.write('Atendimento via WhatsApp.') # FECHAMENTO PUB
-        pa.press('tab') #BOX2
-        pa.write('Atendimento via WhatsApp.') # FECHAMENTO PRIV
-        pa.press('tab', presses=4) # FECHAR
+        pa.press('tab', presses=3)
+        pa.write('Atendimento via WhatsApp.')
+        pa.press('tab')
+        pa.write('Atendimento via WhatsApp.')
+        pa.press('tab', presses=4)
         sleep(1)
-        pa.press('enter') # CONCLUI
+        pa.press('enter')
         sleep(2)
-        pa.click(x=21, y=62) # SETA PARA VOLTAR PÁGINA
+        pa.click(x=21, y=62)
         sleep(2.5)
-        pa.click(x=93, y=63) # RECARREGA AS PÁGINAS
+        pa.click(x=93, y=63)
         sleep(3.5)
 
 janela = Tk()
