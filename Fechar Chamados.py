@@ -1,4 +1,4 @@
-from tkinter import *
+import customtkinter
 import pyautogui as pa
 from time import sleep
 
@@ -88,26 +88,23 @@ def fecha_chamado():
         pa.click(x=93, y=63)
         sleep(2)
 
-janela = Tk()
+janela = customtkinter.CTk()
+customtkinter.set_appearance_mode("dark")
+
 janela.title("Fechamento de Chamado")
 janela.geometry("400x400")
 janela.configure(bg='antiquewhite')
 
-user = Label(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n 8 - Victor Homem",fg='#333333', bg='antiquewhite')
-texto = Label(janela, text="Digite o número do usuário:", bg='antiquewhite', fg='#333333')
-user.pack(pady=10)
-texto.pack(pady=10)
+user = customtkinter.CTkLabel(janela, text="1 - Todos\n2 - Cobrança\n3 - Daniel Bonatti\n4 - Dayvid Oliveira\n5 - José Roberto\n6 - Luna\n7 - Rodrigo Bonatti\n8 - Victor Homem")
+user.pack(pady=20)
 
-analista_entry = Entry(janela, bg='white', fg='#333333', font='arial')
-analista_entry.pack(pady=10)
+analista_entry = customtkinter.CTkEntry(janela, placeholder_text='Digite o N° do usuário')
+analista_entry.pack(pady=20)
 
-texto2 = Label(janela, text="Quantos chamados fechar?", bg='antiquewhite', fg='#333333')
-texto2.pack(pady=10)
+n_entry = customtkinter.CTkEntry(janela, placeholder_text='Qtd Chamados')
+n_entry.pack(pady=20)
 
-n_entry = Entry(janela, bg='white', fg='#333333', font='arial')
-n_entry.pack(pady=10)
-
-fechar = Button(janela, text="Fechar Chamados", command=fecha_chamado, bg='#3C8DBC', fg='#fff', font='arial')
-fechar.pack(pady=10)
+fechar = customtkinter.CTkButton(janela, text="Fechar Chamados", command=fecha_chamado)
+fechar.pack(pady=20)
 
 janela.mainloop()
